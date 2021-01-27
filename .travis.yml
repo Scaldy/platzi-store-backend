@@ -25,7 +25,7 @@ deploy:
   provider: heroku
   skip-cleanup: true
   keep-history: true
-  api_key: apiKey # desde heroku
+  api_key: 551ef315-c1a1-4702-9e76-e94f5c0f1af8
   app: scaldy-platzi-store-backend
   on:
     repo: Scaldy/platzi-store-backend
