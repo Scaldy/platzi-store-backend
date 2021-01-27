@@ -1,0 +1,33 @@
+language: node_js
+
+cache:
+  directories:
+    - node_modules
+    - ~/.npm
+
+node_js:
+  - '12'
+
+git:
+  depth: 3
+
+script:
+  - yarn test
+
+notifications:
+  slack: workspace:token
+  email:
+    reciepients:
+      - oscar@platzi.com
+      - oscar@arepa.dev
+    on_success: always
+    on_failure: always
+
+deploy:
+  provider: heroku
+  skip-cleanup: true
+  keep-history: true
+  api_key: apiKey # desde heroku
+  app: platzi-store-backend
+  on:
+    repo: danibarria/platzi-store-backend
